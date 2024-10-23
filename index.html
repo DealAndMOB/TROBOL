@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page-Trobol</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Trobol</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#music"><i class="fas fa-music"></i> Canciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bio"><i class="fas fa-info-circle"></i> Biografía</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer"><i class="fas fa-envelope"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 hero-content">
+                    <h1 class="mb-4">
+                        <span>New</span> <span>EP</span> <span>Coming</span> <span>Soon</span>
+                    </h1>
+                    <p class="lead mb-4">El Big Bang de la nueva era musical</p>
+                    <div class="social-icons-hero">
+                        <a href="https://www.instagram.com/aka.trobol/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCi7h3wgQegDe1wtcIqKuxeA" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="https://open.spotify.com/intl-es/artist/0gMVVYqg3oaJBfKeDVKJR9" target="_blank" class="social-icon"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 hero-content">
+                    <div class="hero-album-cover">
+                        <img src="images/ep-cover.jpeg" alt="La explosión sónica del mañana">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="music" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Canciones</h2>
+            <div id="music-collage" class="music-collage">
+                <!-- Las tarjetas se generarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="songModal" tabindex="-1" aria-labelledby="songModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header border-0 justify-content-center">
+                    <h5 class="modal-title text-center" id="songModalLabel">Título de la Canción</h5>
+                </div>
+                <div class="d-flex justify-content-around p-4">
+                    <a href="#" id="youtubeLink" target="_blank" class="btn btn-neon btn-youtube">
+                        <i class="fab fa-youtube"></i> YouTube
+                    </a>
+                    <a href="#" id="spotifyLink" target="_blank" class="btn btn-neon btn-spotify">
+                        <i class="fab fa-spotify"></i> Spotify
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="bio">
+        <div class="bio-container">
+            <div class="bio-image">
+                <img src="images/artist-photo.jpeg" alt="TROBOL">
+            </div>
+            <div class="bio-content">
+                <h2 class="bio-title">TROBOL (Pretty Ñero)</h2>
+                <p class="bio-text">
+                    Trobol, también conocido como Pretty Ñero, es una fuerza emergente en la escena del género urbano mexicano. Con su estilo único que fusiona las vibrantes raíces del reggaetón con toques innovadores, Trobol está redefiniendo los límites del sonido urbano latino.
+                </p>
+                <p class="bio-text">
+                    Mexicano, su música es un reflejo de sus experiencias de vida, mezclando ritmos contagiosos con letras que resuenan en la juventud contemporánea.
+                </p>
+                <div class="bio-stats">
+                    <div class="stat">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">Reproducciones</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">EP</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Canciones</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Sobre TROBOL</h3>
+                    <p>Voz emergente del género urbano mexicano. Trobol fusiona reggaetón con sonidos innovadores, creando un estilo único que redefine la música Mexicana.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Sígueme</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/aka.trobol/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCi7h3wgQegDe1wtcIqKuxeA" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="https://open.spotify.com/intl-es/artist/0gMVVYqg3oaJBfKeDVKJR9" target="_blank" class="social-icon"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#music">Música</a></li>
+                        <li><a href="#bio">Biografía</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contacto</h3>
+                    <p><i class="fab fa-instagram"></i> @aka.trobol</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TROBOL. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
