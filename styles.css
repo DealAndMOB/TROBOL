@@ -233,18 +233,87 @@ body::before {
     text-align: center;
 }
 
-/* Modal Styles */
-#songModal .modal-content {
-    background-color: #000000 !important;
-    border: 1px solid #333;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+/* Estilos mejorados para los modales */
+.modal-content {
+    background-color: var(--secondary-color) !important;  /* Negro puro */
+    border: none !important;
+    border-radius: 15px !important;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 0 10px rgba(0, 229, 255, 0.3),
+        0 0 20px rgba(255, 0, 255, 0.3) !important;
 }
 
-#songModal .modal-title {
+.modal-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    padding: 2px;
+    background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.modal-header {
+    border-bottom: none !important;
+    padding: 1.5rem !important;
+}
+
+.modal-header .modal-title {
+    width: 100%;
+    text-align: center;
     font-family: 'Permanent Marker', cursive;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    color: var(--primary-color);
+    text-shadow: 
+        0 0 5px var(--neon-blue),
+        0 0 10px var(--neon-blue),
+        0 0 15px var(--neon-blue);
+}
+
+/* Efecto hover para los botones en el modal */
+.modal .btn-neon:hover {
+    animation: modalButtonGlow 1.5s infinite alternate;
+}
+
+@keyframes modalButtonGlow {
+    from {
+        box-shadow: 
+            0 0 5px var(--neon-blue),
+            0 0 10px var(--neon-pink),
+            inset 0 0 5px var(--neon-blue);
+    }
+    to {
+        box-shadow: 
+            0 0 10px var(--neon-blue),
+            0 0 20px var(--neon-pink),
+            inset 0 0 10px var(--neon-blue);
+    }
+}
+
+/* Ajustes para los botones en el modal */
+.modal .btn-youtube:hover {
+    box-shadow: 
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        inset 0 0 5px #ff0000;
+}
+
+.modal .btn-spotify:hover {
+    box-shadow: 
+        0 0 10px #1DB954,
+        0 0 20px #1DB954,
+        inset 0 0 5px #1DB954;
 }
 
 .btn-neon {
